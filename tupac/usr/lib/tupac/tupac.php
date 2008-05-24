@@ -1,15 +1,14 @@
 #!/usr/bin/php -n
 <?php
 
-if (dirname(__FILE__)=='/usr/bin') {
-	$GLOBALS['include_path']='/usr/lib/tupac/';
-	include '/usr/lib/tupac/tupac.inc.php';
-	include '/usr/lib/tupac/localization.inc.php';
-} else {
-	$GLOBALS['include_path']='usr/lib/tupac/';
-	include 'usr/lib/tupac/tupac.inc.php';
-	include 'usr/lib/tupac/localization.inc.php';
-}
+$GLOBALS['tupac_version']='0.5.3';
+$GLOBALS['cache_version']='1.2.1';
+ini_set('memory_limit','120M');
+$GLOBALS['tupac_directory']='../../var/lib/tupac/';
+$GLOBALS['pacman_directory']='/var/lib/pacman/';
+
+include 'tupac.inc.php';
+include 'localization.inc.php';
 
 if ($GLOBALS['die']) {
 	sendMessage($GLOBALS['die'],array());

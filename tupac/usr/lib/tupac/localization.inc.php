@@ -27,8 +27,8 @@
 // Assign language
 $lang=preg_replace('/\..*/','',$lang);
 try {
-	include $GLOBALS['include_path'].'/localization/'.$lang.'.php';
+	include 'localization/'.$lang.'.php';
 } catch (Exception $e) {
-	include $GLOBALS['include_path'].'/localization/en_US.php';
+	include 'localization/en_US.php';
 }
 

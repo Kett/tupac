@@ -19,13 +19,6 @@ $a=array(
 	2
 );
 
-$GLOBALS['tupac_version']='0.5.2';
-$GLOBALS['cache_version']='1.2';
-
-ini_set('memory_limit','120M');
-
-$GLOBALS['tupac_directory']='/var/lib/tupac/';
-$GLOBALS['pacman_directory']='/var/lib/pacman/';
 
 function getRepoDir($repo) {
 	return $GLOBALS['pacman_directory'].($repo=='local'?'':'sync/').$repo.'/';
@@ -300,8 +293,8 @@ function call($program) {
 
 
 
-include $GLOBALS['include_path'].'/PacmanData.class.php'; 
-include $GLOBALS['include_path'].'/PacmanFileList.class.php'; 
+include 'PacmanData.class.php'; 
+include 'PacmanFileList.class.php'; 
 
 function checkCache() {
 	// Check if we hgave cache
