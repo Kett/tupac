@@ -5,5 +5,5 @@
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
  */
-include dirname(__FILE__).'/en_US.php';
+include $include_path.'localization/en_US.php';
 

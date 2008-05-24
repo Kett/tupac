@@ -61,4 +61,4 @@ $messageset=array(
 							."\n".'  --repos repo1,repo2,repo3,...      : Set active repositories'
 							."\n".'  --lang [xx_XX|machine]             : Set working language'
 							."\n"
-)
+);

@@ -26,9 +26,11 @@
 
 // Assign language
 $lang=preg_replace('/\..*/','',$lang);
-try {
-	include 'localization/'.$lang.'.php';
-} catch (Exception $e) {
-	include 'localization/en_US.php';
-}
+
+$lang_file=$include_path.'/localization/'.$lang.'.php';
+if ( !file_exists($lang_file) )
+	$lang_file=$include_path.'/localization/en_US.php';
+
+include $lang_file; 
+
 

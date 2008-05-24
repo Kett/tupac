@@ -1,20 +1,20 @@
 #!/usr/bin/php -n
 <?php
 
-$GLOBALS['tupac_version']='0.5.3';
-$GLOBALS['cache_version']='1.2.1';
+$tupac_version='0.5.3.2';
+$cache_version='1.2.1';
 ini_set('memory_limit','120M');
-$GLOBALS['tupac_directory']='../../var/lib/tupac/';
-$GLOBALS['pacman_directory']='/var/lib/pacman/';
+$tupac_directory = dirname(__FILE__).'/../../../var/lib/tupac/';
+$include_path=dirname(__FILE__).'/';
+$pacman_directory='/var/lib/pacman/';
 
-include 'tupac.inc.php';
-include 'localization.inc.php';
+include $include_path.'tupac.inc.php';
+include $include_path.'localization.inc.php';
 
 if ($GLOBALS['die']) {
 	sendMessage($GLOBALS['die'],array());
 	exit;
 }
-
 if (count($argv)==1) {
 	checkCache();
 	exit;

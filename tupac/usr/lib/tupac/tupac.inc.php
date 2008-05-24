@@ -292,9 +292,8 @@ function call($program) {
 }
 
 
-
-include 'PacmanData.class.php'; 
-include 'PacmanFileList.class.php'; 
+include $include_path.'PacmanData.class.php'; 
+include $include_path.'PacmanFileList.class.php'; 
 
 function checkCache() {
 	// Check if we hgave cache
@@ -576,12 +575,15 @@ function setProxy($proxy) {
 *******************************************
 ******************************************/
 
-if (!file_exists($GLOBALS['tupac_directory']))
+
+if ( !file_exists(($tupac_directory)) )
 	if ($uid==0) {
-		mkdir($GLOBALS['tupac_directory']);
-		chmod($GLOBALS['tupac_directory'],0777);
+		mkdir($tupac_directory);
+		chmod($tupac_directory,0777);
 	} else {
-		sendMessage('cacheNeedRoot',array());
+		// TODO Make this message localized
+		//sendMessage('cacheNeedRoot',array());
+		Std::send('In order to create the TUPAC_CACHE directory you need to be root. ('.$tupac_directory.')');
 		exit;
 	}
 

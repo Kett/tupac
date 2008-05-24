@@ -281,7 +281,7 @@ class PacmanData {
 
 	public function verifyIntegrity() {
 		if ($this->cache_version!=$GLOBALS['cache_version'])
-			return "cache_updated";
+			return 'cache_updated';
 
 		return 'database_outdated';
 	}
