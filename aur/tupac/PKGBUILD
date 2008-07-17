@@ -20,7 +20,7 @@ replaces=()
 backup=()
 options=()
 install=
-source=(http://github.com/Kett/tupac/tree/master/tars/tupac-$pkgver.tar.gz?raw=true)
+source=(http://github.com/Kett/tupac/tree/master/aur/tars/tupac-$pkgver.tar.gz?raw=true)
 noextract=()
 md5sums=('5491282a0e6cbfe408d0f8420f1f69fa')
 
