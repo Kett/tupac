@@ -85,7 +85,7 @@ switch ($argv[1]) {
 					exit;
 					break;
 				default:
-					echo 'Unknow command: '.$input[0]."\n";
+					echo 'Unknown command: '.$input[0]."\n";
 					break;
 			}
 		}
