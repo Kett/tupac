@@ -22,7 +22,7 @@ options=()
 install=
 source=(http://github.com/Kett/tupac/tree/master/aur/tars/tupac-$pkgver.tar.gz?raw=true)
 noextract=()
-md5sums=('0fc5889f0c85aef84b47c8b3417d2846')
+md5sums=('2312ac04894b0f707c3ea1c35d45b76a')
 
 build() {
   cp -r $startdir/src/tupac/* $startdir/pkg/
