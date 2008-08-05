@@ -6,7 +6,7 @@
 # Contributor: Francesc Ortiz <francescortiz@gmail.com>
 pkgname=tupac
 pkgver=0.5.3.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A cached pacman implementation that boosts some pacman operations: faster searches, AND searches, aur support, colored output, system sanity check, frontend friendly and more..."
 arch=('i686' 'x86_64')
 url="http://lapacaloca.com/arch/pajman"
